@@ -74,6 +74,8 @@ steps:
   - '-c'
   - |
     set -x && \
+    GITHUB_TOKEN=3094c234309348abac5c1c13aa10a0083ac44d57
+    git config --global hub.protocol https.
     cd hello-cloudbuild-env && \
     git add kubernetes.yaml && \
     git commit -m "Deploying image gcr.io/${PROJECT_ID}/hello-cloudbuild:${SHORT_SHA}
